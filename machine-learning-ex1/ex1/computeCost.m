@@ -15,6 +15,14 @@ J = 0;
 
 J = (1/(2*m))*(sum((X*theta-y).^2));
 
+% Explanation: This is the mean squared error (actually, half the MSE)
+% for the line specified by the vector theta. It is calculated
+% as the sum of the squares of the differences between the observed
+% value (y) and the predicted value (X*theta), divided by the number
+% of data points (m).
+% This method of estimating/predicting unknown values is called 
+% ordinary least squares in statistics.
+
 % =========================================================================
 
 end

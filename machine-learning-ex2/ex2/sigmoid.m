@@ -11,6 +11,7 @@ g = zeros(size(z));
 
 g = 1./(1+(e.^((-1)*z)))
 
+% This function is 0 at z = -infinity, 0.5 at z = 0 and 1 at z = infinity.
 
 
 % =============================================================

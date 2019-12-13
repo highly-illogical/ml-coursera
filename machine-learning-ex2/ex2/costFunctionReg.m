@@ -23,6 +23,22 @@ h = sigmoid(X*theta)
 J = 1/m*sum((-1)*y.*log(h) - (1-y).*log(1-h)) + (lambda/(2*m))*sum(theta(2:size(theta)).^2)
 grad = 1/m*sum((h-y).*X)' + (lambda/m)*[0; theta(2:size(theta))]
 
+% The cost function for logistic regression with regularization has
+% an extra regularization term (the lambda/2*m... term). Lambda is
+% called the regularization parameter and its function here is to
+% penalize theta parameters that get too large.
+%
+% The kind of regularization used here is called L2 regularization
+% where the parameters are penalized in proportion to their squares.
+% It makes sense to use this here because logistic regression is
+% a generalized linear model (i.e. it depends on a linear function
+% of theta and x).
+%
+% With regularization, the solution (decision boundary) obtained
+% has higher bias but lower variance.
+%
+% (Note: read up on regularization and regularized logistic regression.)
+
 
 % =============================================================
 
